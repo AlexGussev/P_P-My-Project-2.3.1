@@ -43,13 +43,11 @@ public class HelloController {
     public String updateUser(@RequestParam(value = "id", required = false) long id, ModelMap modelMap) {
         User user = userService.getUserById(id);
         modelMap.addAttribute("user", user);
-        System.out.println(user.toString());
         return "user-info";
     }
 
     @GetMapping("/delite")
     public String delUser(@RequestParam(value = "id", required = false) long id) {
-        System.out.println(id);
         userService.deleteUserById(id);
         return "redirect:/";
     }
