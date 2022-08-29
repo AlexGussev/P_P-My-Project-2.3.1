@@ -12,12 +12,12 @@ import web.service.UserService;
 
 @Controller
 @RequestMapping("/")
-public class HelloController {
+public class UserController {
 
     private final UserService userService;
 
     @Autowired
-    public HelloController(UserService userService){
+    public UserController(UserService userService){
         this.userService = userService;
 
     }
